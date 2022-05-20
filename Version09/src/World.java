@@ -5,7 +5,8 @@ import java.awt.event.KeyEvent;
 import java.util.Arrays;
 import java.util.Random;
 
-import java.util.Timer; // timer.schedule(new TimerTask() 不导入此包, 这里会报错 ? ?
+import java.util.Timer;
+// timer.schedule(new TimerTask() 不导入此包, 这里会报错 ? ?
 
 import java.util.TimerTask;
 
@@ -24,7 +25,7 @@ public class World extends JPanel {
     public static final int WIDTH = 641; // 窗口的宽
     public static final int HEIGHT = 479; // 窗口的高
 
-    private BattleShip ship = new BattleShip(); // 战舰
+    private final BattleShip ship = new BattleShip(); // 战舰
 
     // 潜艇(侦察潜艇、鱼雷潜艇、水雷潜艇)
     private SeaObject[] submarines = {};
@@ -86,9 +87,9 @@ public class World extends JPanel {
 
                 if(submarines[i] instanceof MineSubmarine) {
 
-                    MineSubmarine ms = (MineSubmarine)submarines[i];
+                    MineSubmarine ms = (MineSubmarine) submarines[i];
                     Mine obj = ms.shootMine();
-                    mines = Arrays.copyOf(mines,mines.length + 1);
+                    mines = Arrays.copyOf(mines, mines.length + 1);
                     mines[mines.length - 1] = obj;
 
                 }
@@ -120,7 +121,7 @@ public class World extends JPanel {
 
         for (int i = 0; i < submarines.length; i++) {
 
-            if (submarines[i].isOutOfBounds()) {
+            if (submarines[i].isOutOfBounds() || submarines[i].isDead()) {
                 submarines[i] = submarines[submarines.length - 1];
                 submarines = Arrays.copyOf(submarines, submarines.length - 1);
             }
@@ -129,7 +130,7 @@ public class World extends JPanel {
 
         for (int i = 0; i < mines.length; i++) {
 
-            if (mines[i].isOutOfBounds()) {
+            if (mines[i].isOutOfBounds() || mines[i].isDead()) {
                 mines[i] = mines[mines.length - 1];
                 mines = Arrays.copyOf(mines, mines.length - 1);
             }
@@ -138,7 +139,7 @@ public class World extends JPanel {
 
         for (int i = 0; i < bombs.length; i++) {
 
-            if (bombs[i].isOutOfBounds()) {
+            if (bombs[i].isOutOfBounds() || bombs[i].isDead()) {
                 bombs[i] = bombs[bombs.length - 1];
                 bombs = Arrays.copyOf(bombs, bombs.length - 1);
             }
@@ -166,12 +167,12 @@ public class World extends JPanel {
                     s.goDead();
 
                     if(s instanceof EnemyScore) {
-                        EnemyScore es = (EnemyScore)s;
+                        EnemyScore es = (EnemyScore) s;
                         score += es.getScore();
                     }
 
                     if(s instanceof EnemyLife) {
-                        EnemyLife ea = (EnemyLife)s;
+                        EnemyLife ea = (EnemyLife) s;
                         int life = ea.getLife();
                         ship.addLife(life);
                     }
