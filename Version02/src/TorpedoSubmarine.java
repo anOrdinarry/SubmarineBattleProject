@@ -12,11 +12,13 @@ import java.util.Random;
 
 public class TorpedoSubmarine {
 
-    int width;
-    int height;
-    int x;
-    int y;
-    int speed;
+    int width; // 宽
+    int height; // 高
+
+    int x; // x坐标
+    int y; // y坐标
+
+    int speed; // 移动速度
 
     // 给鱼雷潜艇添加构造方法
     TorpedoSubmarine() {
@@ -24,12 +26,16 @@ public class TorpedoSubmarine {
         width = 64;
         height = 20;
 
-        x = - width;
+        x = - width; // 负的潜艇的宽
 
-        Random rand = new Random();
+        Random rand = new Random(); // 随机数对象
+
+        // 窗口宽641，高479，y在150-460之间？
+        // 0-310 -> +150 -> 150-460
+        // rand.nextInt(3): [0,3), 左闭区间右开区间！！！
         y = rand.nextInt(479 - height - 150 + 1) + 150;
 
-        speed = rand.nextInt(3) + 1;
+        speed = rand.nextInt(3) + 1; // 1~3之间的随机数
 
     }
 
@@ -37,5 +43,32 @@ public class TorpedoSubmarine {
         System.out.println("鱼雷潜艇x向右移动");
     }
 
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

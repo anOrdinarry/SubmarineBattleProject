@@ -4,17 +4,19 @@
  */
 
 /*
- * 炸弹类
+ * 炸弹类 -- 战舰发射炸弹
  *
  */
 
 public class Bomb {
 
-    int width;
-    int height;
-    int x;
-    int y;
-    int speed;
+    int width; // 宽
+    int height; // 高
+
+    int x; // x坐标
+    int y; // y坐标
+
+    int speed; // 移动速度
 
     // 给炸弹添加构造方法
     Bomb(int x, int y) {
@@ -22,10 +24,11 @@ public class Bomb {
         width = 9;
         height = 12;
 
+        // 炸弹的坐标不能写死，要依据战舰的坐标算出水雷的坐标
         this.x = x;
         this.y = y;
 
-        speed = 1;
+        speed = 3;
 
     }
 
@@ -34,3 +37,29 @@ public class Bomb {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

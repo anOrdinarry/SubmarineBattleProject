@@ -10,16 +10,38 @@
 
 public class BattleShip {
 
-    int width;
-    int height;
-    int x;
-    int y;
-    int speed;
+    int width; // 宽
+    int height; // 高
 
-    int life;
+    int x; // x坐标
+    int y; // y坐标
+
+    int speed; // 移动速度
+
+    int life; // 战舰生命数
 
     void move() {
         System.out.println("战舰左右移动");
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

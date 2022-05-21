@@ -4,17 +4,19 @@
  */
 
 /*
- * 水雷类
+ * 水雷类 -- 水雷潜艇发射水雷
  *
  */
 
 public class Mine {
 
-    int width;
-    int height;
-    int x;
-    int y;
-    int speed;
+    int width; // 宽
+    int height; // 高
+
+    int x; // x坐标
+    int y; // y坐标
+
+    int speed; // 移动速度
 
     // 给水雷添加构造方法
     Mine(int x, int y) {
@@ -22,6 +24,7 @@ public class Mine {
         width = 11;
         height = 11;
 
+        // 水雷的坐标不能写死，要依据水雷潜艇的坐标算出水雷的坐标
         this.x = x;
         this.y = y;
 
@@ -34,3 +37,30 @@ public class Mine {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

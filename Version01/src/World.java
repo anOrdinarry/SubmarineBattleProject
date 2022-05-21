@@ -11,6 +11,8 @@
 public class World {
     public static void main(String[] args) {
 
+        // 创建各个对象，给属性赋值，调用方法测试
+
         // 创建1个战舰对象
         BattleShip bs = new BattleShip();
         bs.width = 50;
@@ -64,4 +66,31 @@ public class World {
         Bomb bb2 = new Bomb();
 
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

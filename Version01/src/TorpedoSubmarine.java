@@ -10,15 +10,32 @@
 
 public class TorpedoSubmarine {
 
-    int width;
-    int height;
-    int x;
-    int y;
-    int speed;
+    int width; // 宽
+    int height; // 高
+
+    int x; // x坐标
+    int y; // y坐标
+
+    int speed; // 移动速度
 
     void move() {
         System.out.println("鱼雷潜艇x向右移动");
     }
 
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
