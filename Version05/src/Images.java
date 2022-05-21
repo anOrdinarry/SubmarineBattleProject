@@ -12,18 +12,27 @@ import javax.swing.*;
 
 public class Images {
 
+  // 公开   静态  图片数据类型  变量名
     public static ImageIcon battleship; // 战舰
-    public static ImageIcon obsersubm;  //侦察潜艇
-    public static ImageIcon torpesubm;  //鱼雷潜艇
-    public static ImageIcon minesubm;   //水雷潜艇
-    public static ImageIcon mine;       //水雷
-    public static ImageIcon bomb;       //深水炸弹
-    public static ImageIcon sea;        //海洋图
-    public static ImageIcon gameover;   //游戏结束图
 
+    public static ImageIcon obsersubm;  // 侦察潜艇
+
+    public static ImageIcon torpesubm;  // 鱼雷潜艇
+
+    public static ImageIcon minesubm;   // 水雷潜艇
+
+    public static ImageIcon mine;       // 水雷
+
+    public static ImageIcon bomb;       // 炸弹
+
+    public static ImageIcon sea;        // 海洋图
+
+    public static ImageIcon gameover;   // 游戏结束图
+
+    // 静态块，初始化静态资源 -> 这些图片
     static {
 
-        battleship = new ImageIcon("images/battleship.png");
+        battleship = new ImageIcon("images/battleship.png"); // 将 images 下的 battleship.png 图片，读到静态变量 battleship 中
 
         obsersubm = new ImageIcon("images/obsersubm.png");
 
@@ -42,7 +51,7 @@ public class Images {
     }
 
     // 读取图片
-    // 返回 8 则读取成功
+    // 运行此图片类，返回 8 则读取成功
     public static void main(String[] args) {
 
         System.out.println(battleship.getImageLoadStatus());

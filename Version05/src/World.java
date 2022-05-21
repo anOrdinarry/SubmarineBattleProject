@@ -22,7 +22,7 @@ public class World extends JPanel {
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        frame.setSize(641 + 16, 479 + 39);
+        frame.setSize(641 + 16, 479 + 39); // 这里+16是win10系统特性，+39的原因看 Version04_01 下的图片 -> img1.png
 
         frame.setLocationRelativeTo(null);
 
