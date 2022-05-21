@@ -17,9 +17,24 @@ public class TorpedoSubmarine extends SeaObject {
 
     }
 
+    // 重写 move() 移动
+    @Override
     void move() {
-        x += speed;
+        x += speed; // x+(向右)
     }
 
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,7 +4,7 @@
  */
 
 /*
- * 水雷潜艇类
+ * 水雷潜艇类 -- 水雷潜艇发射水雷
  *
  */
 
@@ -13,7 +13,7 @@ public class MineSubmarine extends SeaObject {
     // 给水雷潜艇添加构造方法
     MineSubmarine() {
 
-        super(63,19);
+        super(63, 19);
 
     }
 
@@ -21,5 +21,27 @@ public class MineSubmarine extends SeaObject {
         System.out.println("水雷潜艇x向右移动");
     }
 
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

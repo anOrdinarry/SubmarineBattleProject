@@ -4,20 +4,20 @@
  */
 
 /*
- * 战舰类
+ * 战舰类 -- 战舰发射炸弹
  *
  */
 
 public class BattleShip extends SeaObject {
 
-    int life;
+    int life; // 战舰生命数
 
     // 给战舰添加构造方法
     BattleShip() {
 
-        super(66,26,270,124,20);
+        super(66, 26, 270, 124, 20);
 
-        life = 5;
+        life = 5; // 设置战舰初始生命数
 
     }
 
@@ -26,3 +26,27 @@ public class BattleShip extends SeaObject {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

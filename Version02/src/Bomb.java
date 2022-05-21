@@ -24,7 +24,7 @@ public class Bomb {
         width = 9;
         height = 12;
 
-        // 炸弹的坐标不能写死，要依据战舰的坐标算出水雷的坐标
+        // 炸弹的坐标不能写死，要依据战舰的坐标算出炸弹的坐标
         this.x = x;
         this.y = y;
 

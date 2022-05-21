@@ -4,7 +4,7 @@
  */
 
 /*
- * 水雷潜艇类
+ * 水雷潜艇类 -- 水雷潜艇发射水雷
  *
  */
 
@@ -17,9 +17,31 @@ public class MineSubmarine extends SeaObject {
 
     }
 
+    // 重写 move() 移动
+    @Override
     void move() {
-        x += speed;
+        x += speed; // x+(向右)
     }
 
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

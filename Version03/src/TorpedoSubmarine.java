@@ -13,7 +13,7 @@ public class TorpedoSubmarine extends SeaObject {
     // 给鱼雷潜艇添加构造方法
     TorpedoSubmarine() {
 
-        super(64,20);
+        super(64, 20);
 
     }
 
@@ -21,5 +21,26 @@ public class TorpedoSubmarine extends SeaObject {
         System.out.println("鱼雷潜艇x向右移动");
     }
 
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

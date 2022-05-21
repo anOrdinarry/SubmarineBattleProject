@@ -14,6 +14,7 @@ public class World extends JPanel {
     public static void main(String[] args) {
 
         JFrame frame = new JFrame();
+
         World world = new World();
 
         world.setFocusable(true);
@@ -22,14 +23,37 @@ public class World extends JPanel {
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        frame.setSize(641 + 16, 479 + 39);
+        frame.setSize(641 + 16, 479 + 39); // 这里+16是win10系统特性，+39的原因看此Module下的图片 -> img1.png
 
         frame.setLocationRelativeTo(null);
 
         frame.setVisible(true);
 
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

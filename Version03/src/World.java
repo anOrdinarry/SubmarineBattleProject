@@ -21,8 +21,8 @@ public class World {
         oses[2] = new ObserveSubmarine();
 
         for (int i = 0; i < oses.length; i++) {
-            System.out.println(oses[i].x + ", " + oses[i].y); // 输出每个水雷潜艇的x和y坐标
-            oses[i].move(); // 每个水雷潜艇移动
+            System.out.println(oses[i].x + ", " + oses[i].y); // 输出每个侦察潜艇的x和y坐标
+            oses[i].move(); // 每个侦察潜艇移动
         }
 
         System.out.println("--------------------------");
@@ -74,9 +74,31 @@ public class World {
             bbs[i].move();
         }
 
-
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -13,7 +13,7 @@ public class ObserveSubmarine extends SeaObject {
     // 给侦查潜艇添加构造方法
     ObserveSubmarine() {
 
-        super(63,19);
+        super(63, 19);
 
     }
 
@@ -21,5 +21,23 @@ public class ObserveSubmarine extends SeaObject {
         System.out.println("侦查潜艇x向右移动");
     }
 
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

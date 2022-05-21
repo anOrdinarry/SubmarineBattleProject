@@ -16,7 +16,7 @@ public class World {
 
         // 将 侦察艇数组、鱼雷艇数组、水雷艇数组 统一组合为 SeaObject 数组
         SeaObject[] submarines = new SeaObject[5];
-        submarines[0] = new ObserveSubmarine();
+        submarines[0] = new ObserveSubmarine(); // 向上造型
         submarines[1] = new ObserveSubmarine();
         submarines[2] = new TorpedoSubmarine();
         submarines[3] = new TorpedoSubmarine();
@@ -28,7 +28,7 @@ public class World {
 
             SeaObject s = submarines[i]; // 获取每一个潜艇
 
-            System.out.println("初始的坐标: " + s.x + ", " + s.y);
+            System.out.println("初始的坐标: " + s.x + ", " + s.y); // 获取每个潜艇的初始坐标
 
             s.move(); // 移动
 
