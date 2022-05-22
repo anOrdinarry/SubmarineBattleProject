@@ -56,7 +56,7 @@ public class SeaObject {
 
     }
 
-    /* 移动 */
+    // 移动
     public void move() {
         System.out.println("海洋对象移动");
     }

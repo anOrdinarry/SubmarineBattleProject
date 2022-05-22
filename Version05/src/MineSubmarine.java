@@ -23,5 +23,4 @@ public class MineSubmarine extends SeaObject {
         x += speed; // x+(向右)
     }
 
-
 }

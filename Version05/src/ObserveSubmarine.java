@@ -23,5 +23,4 @@ public class ObserveSubmarine extends SeaObject {
         x += speed; // x+(向右)
     }
 
-
 }

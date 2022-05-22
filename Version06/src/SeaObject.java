@@ -14,35 +14,43 @@ import java.util.Random;
 
 public abstract class SeaObject {
 
-    public static final int LIVE = 0;
-    public static final int DEAD = 1;
+    public static final int LIVE = 0; // 活着的
+    public static final int DEAD = 1; // 死了的
 
     protected int state = LIVE; // 当前状态
 
-    protected int width;
-    protected int height;
+    protected int width; // 宽
+    protected int height; // 高
 
-    protected int x;
-    protected int y;
+    protected int x; // x坐标
+    protected int y; // y坐标
 
-    protected int speed;
+    protected int speed; // 移动速度
 
     /* 专门为 三种潜艇 提供的 构造方法 */
+    // 三种潜艇的宽和高不一样，所以数据不能写死，需要传参写活
+    // 三种潜艇的x, y, speed是一样的，所以数据可以写死，不需要传参
     public SeaObject(int width, int height) {
 
         this.width = width;
         this.height = height;
 
-        x = - width;
+        x = - width; // 负的潜艇的宽
 
-        Random rand = new Random();
+        Random rand = new Random(); // 随机数对象
+
+        // 窗口宽641，高479，y在150-460之间？
+        // 0-310 -> +150 -> 150-460
+        // rand.nextInt(3): [0,3), 左闭区间右开区间！！！
         y = rand.nextInt(World.HEIGHT - height - 150 + 1) + 150;
 
-        speed = rand.nextInt(3) + 1;
+        speed = rand.nextInt(3) + 1; // 1~3之间的随机数
 
     }
 
     /* 专门为 战舰、水雷、深水炸弹 提供的 构造方法 */
+    // 战舰、水雷、炸弹三者的宽, 高, x, y, speed都是不一样的，
+    // 所以数据不能写死，需要传参写活
     public SeaObject(int width, int height, int x, int y, int speed) {
 
         this.width = width;
@@ -55,22 +63,31 @@ public abstract class SeaObject {
 
     }
 
+    // 移动
     public abstract void move();
 
+    // 获取对象的图片
     public abstract ImageIcon getImage();
 
+    // 判断对象是否是活着的
     public boolean isLive() {
+
+        // 若当前状态是LIVE，表示活着的，返回true，否则返回false
         return state == LIVE;
     }
 
+    // 判断对象是否是死了的
     public boolean isDead() {
+
+        // 若当前状态是DEAD，表示死了的，返回true，否则返回false
         return state == DEAD;
     }
 
-    public void paintImage(Graphics g) {
+    // 画对象                g: 画笔
+    public void paintImage(Graphics g) { // CV即可
 
-        if(isLive()) {
-            this.getImage().paintIcon(null,g,x,y);
+        if(isLive()) { // 若是活着的
+            this.getImage().paintIcon(null, g, this.x, this.y);
         }
 
     }

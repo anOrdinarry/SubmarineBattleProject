@@ -6,7 +6,7 @@ import javax.swing.*;
  */
 
 /*
- * 水雷潜艇类
+ * 水雷潜艇类 -- 水雷潜艇发射水雷
  *
  */
 
@@ -19,14 +19,16 @@ public class MineSubmarine extends SeaObject {
 
     }
 
+    // 重写 move() 移动
+    @Override
     public void move() {
-        System.out.println("水雷潜艇x向右移动");
+        x += speed; // x+(向右)
     }
 
+    // 重写 getImage() 获取图片
     @Override
     public ImageIcon getImage() {
         return Images.minesubm;
     }
-
 
 }
