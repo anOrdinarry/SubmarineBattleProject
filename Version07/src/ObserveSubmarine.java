@@ -19,10 +19,13 @@ public class ObserveSubmarine extends SeaObject {
 
     }
 
+    // 重写 move() 移动
+    @Override
     public void move() {
-        System.out.println("侦察潜艇x向右移动");
+        x += speed; // x+(向右)
     }
 
+    // 重写 getImage() 获取图片
     @Override
     public ImageIcon getImage() {
         return Images.obsersubm;

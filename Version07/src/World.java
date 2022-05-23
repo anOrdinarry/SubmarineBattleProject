@@ -21,15 +21,17 @@ public class World extends JPanel {
     public static final int WIDTH = 641; // 窗口的宽
     public static final int HEIGHT = 479; // 窗口的高
 
-    private BattleShip ship = new BattleShip(); // 战舰
+    /* 如下这一堆为窗口中所显示的对象 */
 
-    // 潜艇(侦察潜艇、鱼雷潜艇、水雷潜艇)
+    private BattleShip ship = new BattleShip(); // 战舰 -- 就一个
+
+    // 潜艇(侦察潜艇、鱼雷潜艇、水雷潜艇)数组
     private SeaObject[] submarines = {};
 
-    // 水雷
+    // 水雷数组
     private Mine[] mines = {};
 
-    // 炸弹
+    // 炸弹数组
     private Bomb[] bombs = {};
 
     /** 随机生成潜艇 */
@@ -123,9 +125,12 @@ public class World extends JPanel {
 
     }
 
-    public void paint(Graphics g) {
+    // 重写 JPanel类 中的 paint()方法，往窗口中画东西
+    // g: 画笔
+    // 想画东西要重写 paint()方法
+    public void paint(Graphics g) { // 在画窗口时系统自动调用
 
-        Images.sea.paintIcon(null, g,0,0); // 画海洋图
+        Images.sea.paintIcon(null, g, 0, 0); // 画海洋图 -- CV即可
 
         ship.paintImage(g);
 
@@ -154,13 +159,13 @@ public class World extends JPanel {
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        frame.setSize(WIDTH + 16, HEIGHT + 39);
+        frame.setSize(WIDTH + 16, HEIGHT + 39); // 这里+16是win10系统特性，+39的原因看 Version04_01 下的图片 -> img1.png
 
         frame.setLocationRelativeTo(null);
 
-        frame.setVisible(true);
+        frame.setVisible(true); // 自动调用 paint()方法
 
-        world.action();
+        world.action(); // 启动程序的执行
 
     }
 }
